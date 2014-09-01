@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ash">#707070</color>
+    <color name="mirror">#c1c1c1</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#da4241</color>
+    <color name="blue">#1fa4d2</color>
+    <color name="green">#75b734</color>
+    <color name="purple">#915f9d</color>
+</resources>

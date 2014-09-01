@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:tag="ListFragment">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/brochureGridPullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:clipToPadding="false"
+            android:fadingEdge="none"
+            android:gravity="center"
+            android:horizontalSpacing="8dp"
+            android:listSelector="@drawable/list_selector_holo_light"
+            android:numColumns="@integer/grid_columns"
+            android:padding="@dimen/viewPadding"
+            android:scrollbarStyle="outsideOverlay"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="8dp"
+            tools:listitem="@layout/single_list_layout" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/favoriteListLoadingView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingRight="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/progress_loading"
+            android:textColor="@color/ash"
+            android:textSize="@dimen/textSizeXtraSmall" />
+    </LinearLayout>
+
+</FrameLayout>
